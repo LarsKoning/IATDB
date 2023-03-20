@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('note');
 
             $table->foreign('sort')->references('sort')->on('sort_of_animals');
-            $table->foreign('owner')->references('accountID')->on('users');
+            $table->foreign('owner')->references('id')->on('users');
         });
     }
 
