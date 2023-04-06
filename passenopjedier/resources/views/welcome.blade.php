@@ -6,7 +6,7 @@
 
         <title>Passen Op Je Dier</title>
 
-        <link rel="stylesheet" href="C:\Users\dekin\OneDrive - Hogeschool Leiden\Documenten\GitHub\IATDB\passenopjedier\public\css">
+        <link rel="stylesheet" href="/css/master.css">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
