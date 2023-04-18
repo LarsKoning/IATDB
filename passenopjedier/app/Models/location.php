@@ -12,15 +12,15 @@ class location extends Model
     protected $table = 'location';
 
     public function whatAnimals(){
-        return $this->hasMany('\App\Models\LocationAvailability', "location", "address");
+        return $this->hasMany('\App\Models\location_availability', "location", "address");
     }
 
     public function searchMedia(){
-        return $this->hasMany('\App\Models\LocationMedia', "location", "address");
+        return $this->hasMany('\App\Models\location_media', "location", "address");
     }
 
     public function findReviews(){
-        return $this->hasMany('\App\Models\Reviews', "location", "address");
+        return $this->hasMany('\App\Models\review', "location", "address");
     }
 
     public function mediaUser(){

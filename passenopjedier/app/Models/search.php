@@ -16,11 +16,11 @@ class search extends Model
     }
 
     public function searchingFor(){
-        return $this->belongsTo('\App\Models\Animals', "for", "animalID");
+        return $this->belongsTo('\App\Models\animal', "for", "animalID");
     }
 
     public function mediaAnimal(){
-        return $this->belongsTo('\App\Models\AnimalsMedia', "for", "animal");
+        return $this->belongsTo('\App\Models\animal_media', "for", "animal");
     }
 
     public function mediaUser(){

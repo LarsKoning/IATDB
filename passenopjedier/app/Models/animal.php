@@ -12,11 +12,11 @@ class animal extends Model
     protected $table = 'animals';
 
     public function searchMedia(){
-        return $this->hasMany('\App\Models\AnimalsMedia', "animal", "animalID");
+        return $this->hasMany('\App\Models\animal_media', "animal", "animalID");
     }
     
     public function whatKind(){
-        return $this->belongsTo('\App\Models\KindOfAnimals', "sort", "sort");
+        return $this->belongsTo('\App\Models\sort_of_animals', "sort", "sort");
     }
 
     public function ownedBy(){
