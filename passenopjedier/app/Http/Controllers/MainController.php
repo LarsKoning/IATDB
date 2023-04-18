@@ -23,6 +23,7 @@ class MainController extends Controller
         $searching = search::all();
         $user = Auth::user();
 
+
         return view('dashboard', [
             'animals' => $animals,
             'SOA' => $SOA,

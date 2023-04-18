@@ -21,6 +21,8 @@
   @endforeach
 </ul>
 
+
+<h1 class="tekst">Locations</h1>
 <ul class="cards">
   @foreach ($locations as $location)
   <li>
