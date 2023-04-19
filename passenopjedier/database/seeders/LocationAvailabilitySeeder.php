@@ -14,7 +14,7 @@ class LocationAvailabilitySeeder extends Seeder
     public function run(): void
     {
         DB::table('location_availability')->insert([
-            'location' => 'Wolfskers 64',
+            'location' => 'Goorweg 145',
             'for' => 'Dog'
         ]);
         DB::table('location_availability')->insert([

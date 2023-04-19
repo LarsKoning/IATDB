@@ -24,7 +24,9 @@ class MainController extends Controller
         $user = Auth::user();
 
 
-        return view('dashboard', [
+
+
+        return view('home', [
             'animals' => $animals,
             'SOA' => $SOA,
             'locations' => $locations,

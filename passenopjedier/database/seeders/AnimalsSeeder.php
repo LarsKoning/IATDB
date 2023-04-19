@@ -15,25 +15,25 @@ class AnimalsSeeder extends Seeder
     {
         
         DB::table('animals')->insert([
-            "name" => "gerrit",
+            "name" => "Mimmie",
             "age" => 3,
-            "sort" => "Bird",
+            "sort" => "Cat",
             "owner" => 1,
-            "note" => "Niet schelden, wnat hij zal het napraten"
+            "note" => "Niet schelden, want hij gaat je kapot krabben"
         ]);
         DB::table('animals')->insert([
-            "name" => "guppi",
+            "name" => "gerrit",
             "age" => 1,
-            "sort" => "Fish",
+            "sort" => "Dog",
             "owner" => 2,
-            "note" => ""
+            "note" => "He run fast"
         ]);
         DB::table('animals')->insert([
             "name" => "garfield",
             "age" => 9,
             "sort" => "Cat",
             "owner" => 2,
-            "note" => "Laat hem niet bij guppi komen!!"
+            "note" => "Laat hem niet bij lasagna komen!!"
         ]);
     }
 }
