@@ -1,4 +1,7 @@
 @extends('dashboard')
 @section('content')
-<h1>{{$animal->name}}</h1>
+<img src="{{$search->mediaAnimal->media}}" class="pfp" alt="L bozo">
+<h1>{{$animal->name}}, {{$animal->sort}}</h1>
+<h2>{{$animal->age}} Years Old</h2>
+<p>{{$animal->note}}</p>
 @endsection

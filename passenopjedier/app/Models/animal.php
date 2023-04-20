@@ -11,6 +11,8 @@ class animal extends Model
 
     protected $table = 'animals';
 
+    public $timestamps = false;
+
     public function searchMedia(){
         return $this->hasMany('\App\Models\animal_media', "animal", "animalID");
     }

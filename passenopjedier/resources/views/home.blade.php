@@ -3,7 +3,7 @@
 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
   <div class="sm:rounded-lg">
     
-    <h1 class="tekst">Animals</h1>
+    <h1 class="tekst">Searching Animals</h1>
 
     <ul class="cards">
       @foreach ($searching as $search)
@@ -27,11 +27,11 @@
     </ul>
 
 
-    <h1 class="tekst">Locations</h1>
+    <h1 class="tekst2">Available Locations</h1>
     <ul class="cards">
       @foreach ($locations as $location)
       <li>
-        <a href="" class="card">
+        <a href="/location/{{$location->address}}" class="card">
         <img src="{{$location->searchMedia->first()->media}}" class="card__image" alt="Picture of the animal">
           <div class="card__overlay">
             <div class="card__header">

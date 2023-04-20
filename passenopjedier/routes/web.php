@@ -30,6 +30,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/location/{address}', [\App\Http\Controllers\LocationController::class, 'showSpecific']);
     Route::get('/searching/{id}', [\App\Http\Controllers\AnimalController::class, 'showSpecific']);
+
+    Route::get('/addAnimal', [\App\Http\Controllers\AddAnimalController::class, 'index']);
+    Route::post('store-form', [\App\Http\Controllers\AddAnimalController::class, 'store']);
 });
 
 require __DIR__.'/auth.php';
