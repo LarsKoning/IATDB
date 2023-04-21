@@ -26,7 +26,7 @@ class AnimalController extends Controller
 
     public function showContact($id){
         $user = Auth::user();
-        $search = Searching::where('id', $id)->first();
+        $search = search::where('id', $id)->first();
         $animal = $search->searchingFor()->first();
 
 
@@ -36,5 +36,28 @@ class AnimalController extends Controller
             'search' => $search,
             'animal' => $animal,
         ]);
+    }
+
+    public function edit($id){
+        $user = Auth::user();
+        $search = search::where('id', $id)->first();
+        $animal = $search->searchingFor()->first();
+        return view('editAnimal', [
+            'user' => $user,
+            'id' => $id,
+            'search' => $search,
+            'animal' => $animal,
+        ]);
+    }
+
+    public function update(Request $request, $id){
+        $animal = animal::where('animalID', $id)->first();
+        $animal->name = $request->input('name');
+        $animal->age = $request->input('age');
+        $animal->sort = $request->input('sort');
+        $animal->note = $request->input('note');
+        $animal->update();
+
+        return redirect('/dashboard')->with('status', "animal updated");
     }
 }

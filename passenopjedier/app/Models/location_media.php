@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class location_media extends Model
 {
     protected $table = 'location_media';
+    public $timestamps = false;
+
 }

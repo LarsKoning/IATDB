@@ -11,6 +11,10 @@ class location extends Model
 
     protected $table = 'location';
 
+
+    public $timestamps = false;
+
+
     public function whatAnimals(){
         return $this->hasMany('\App\Models\location_availability', "location", "address");
     }

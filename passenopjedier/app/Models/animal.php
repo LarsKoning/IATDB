@@ -10,6 +10,7 @@ class animal extends Model
     use HasFactory;
 
     protected $table = 'animals';
+    protected $primaryKey = 'animalID';
 
     public $timestamps = false;
 

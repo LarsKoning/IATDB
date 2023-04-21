@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add An Animal</title>
+    <title>Edit Animals</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -14,31 +14,32 @@
   @endif
   <div class="card">
     <div class="card-header text-center font-weight-bold">
-      Add Animal
+      Edit Animal Data
     </div>
     <div class="card-body">
-      <form name="addAnimal" id="addAnimal" method="post" action="{{url('store-form')}}">
+      <form name="addAnimal" id="addAnimal" method="post" action="/edit-form/{{$animal->animalID}}">
        @csrf
+       @method('PUT')
         <div class="form-group">
           <label for="exampleInputEmail1">Name</label>
-          <input type="text" id="name" name="name" class="form-control" required="">
+          <input type="text" id="name" name="name" value="{{$animal->name}}" class="form-control" required="">
         </div>
 
         <div class="form-group">
           <label for="exampleInputEmail1">Age</label>
-          <textarea name="age" class="form-control" required=""></textarea>
+          <input name="age" class="form-control" value="{{$animal->age}}" required="">
         </div>
 
         <div class="form-group">
           <label for="exampleInputEmail1">Sort</label>
-          <input type="text" id="sort" name="sort" class="form-control" required="">
+          <input type="text" id="sort" name="sort" value="{{$animal->sort}}" class="form-control" required="">
         </div>
 
         <div class="form-group">
           <label for="exampleInputEmail1">Note</label>
-          <input type="text" id="note" name="note" class="form-control" required="">
+          <input type="text" id="note" name="note" value="{{$animal->note}}" class="form-control" required="">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Update</button>
       </form>
     </div>
   </div>

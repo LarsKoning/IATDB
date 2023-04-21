@@ -21,6 +21,6 @@ class AddAnimalController extends Controller
         $NA->sort = $request->sort;
         $NA->note = $request->note;
         $NA->save();
-        return redirect('addAnimal')->with('status', 'Animal has been inserted');
+        return redirect('dashboard')->with('status', 'Animal has been inserted');
     }
 }

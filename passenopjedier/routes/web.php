@@ -31,8 +31,18 @@ Route::middleware('auth')->group(function () {
     Route::get('/location/{address}', [\App\Http\Controllers\LocationController::class, 'showSpecific']);
     Route::get('/searching/{id}', [\App\Http\Controllers\AnimalController::class, 'showSpecific']);
 
-    Route::get('/addAnimal', [\App\Http\Controllers\AddAnimalController::class, 'index']);
+    Route::get('/addAnimal', [\App\Http\Controllers\AddAnimalController::class, 'index'])->name('addAnimal');
     Route::post('store-form', [\App\Http\Controllers\AddAnimalController::class, 'store']);
+
+    Route::get('/addLocation', [\App\Http\Controllers\AddlocationController::class, 'index'])->name('addLocation');
+    Route::post('store-forms', [\App\Http\Controllers\AddLocationController::class, 'store']);
+
+
+    Route::get('/edit/{id}', [\App\Http\Controllers\AnimalController::class, 'edit']);
+    Route::put('/edit-form/{id}', [\App\Http\Controllers\AnimalController::class, 'update']);
+
+    Route::view('myAnimals', 'myAnimals')->name('myAnimals');
+
 });
 
 require __DIR__.'/auth.php';

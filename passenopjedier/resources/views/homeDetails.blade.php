@@ -17,6 +17,4 @@
 
 <p>Owned by: {{$location->ownedBy->firstname}}</p>
 
-
-
 @endsection
