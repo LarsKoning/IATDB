@@ -51,12 +51,10 @@ class AnimalController extends Controller
 
     public function edit($id){
         $user = Auth::user();
-        $search = search::where('id', $id)->first();
-        $animal = $search->searchingFor()->first();
+        $animal = animal::where('animalID', $id)->first();
         return view('editAnimal', [
             'user' => $user,
             'id' => $id,
-            'search' => $search,
             'animal' => $animal,
         ]);
     }

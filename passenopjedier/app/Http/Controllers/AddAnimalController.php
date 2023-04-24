@@ -28,6 +28,6 @@ class AddAnimalController extends Controller
         $NAM->animal = $NA->animalID;
 
         $NAM->save();
-        return redirect('dashboard')->with('status', 'Animal has been inserted');
+        return redirect('myAnimals')->with('status', 'Animal has been inserted');
     }
 }
