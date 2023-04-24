@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\animal;
+use App\Models\animal_media;
 use Auth;
 
 class AddAnimalController extends Controller
@@ -20,7 +21,13 @@ class AddAnimalController extends Controller
         $NA->age = $request->age;
         $NA->sort = $request->sort;
         $NA->note = $request->note;
+        
         $NA->save();
+
+        $NAM = new animal_media;
+        $NAM->animal = $NA->animalID;
+
+        $NAM->save();
         return redirect('dashboard')->with('status', 'Animal has been inserted');
     }
 }

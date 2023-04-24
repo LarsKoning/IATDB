@@ -24,6 +24,17 @@ class AnimalController extends Controller
         ]);
     }
 
+    public function myAnimals(){
+        $user = Auth::user();
+        $animals = $user->myAnimals;
+
+        return view('myAnimals', [
+            'user' => $user,
+            'animals' => $animals,
+        ]);
+    }
+
+
     public function showContact($id){
         $user = Auth::user();
         $search = search::where('id', $id)->first();

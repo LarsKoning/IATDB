@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class animal_media extends Model
 {
     protected $table = 'animals_media';
+    public $timestamps = false;
+
 }

@@ -41,7 +41,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/edit/{id}', [\App\Http\Controllers\AnimalController::class, 'edit']);
     Route::put('/edit-form/{id}', [\App\Http\Controllers\AnimalController::class, 'update']);
 
-    Route::view('myAnimals', 'myAnimals')->name('myAnimals');
+    Route::get('/myAnimals', [\App\Http\Controllers\AnimalController::class, 'myAnimals'])->name('myAnimals');
 
 });
 
