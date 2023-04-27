@@ -17,9 +17,15 @@
                     </x-nav-link>
                     <x-nav-link :href="route('addAnimal')" :active="request()->routeIs('addAnimal')">
                         {{ __('Add An Animal') }}
-                    </x-nav-link><x-nav-link :href="route('addLocation')" :active="request()->routeIs('addLocation')">
+                    </x-nav-link>
+                    <x-nav-link :href="route('addLocation')" :active="request()->routeIs('addLocation')">
                         {{ __('Add An Home') }}
                     </x-nav-link>
+                    @if (Auth::user()->role != 'user')
+                        <x-nav-link :href="route('admin')" :active="request()->routeIs('admin')">
+                            {{ __('Admin Dashboard') }}
+                        </x-nav-link>
+                    @endif
                 </div>
             </div>
 

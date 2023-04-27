@@ -31,4 +31,11 @@ class MainController extends Controller
             'user' => $user,
         ]);
     }
+    public function showAdmin(){
+        $users = User::all();
+
+        return view('admin', [
+            'users' => $users,
+        ]);
+    }
 }

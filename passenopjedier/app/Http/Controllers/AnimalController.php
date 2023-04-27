@@ -34,6 +34,26 @@ class AnimalController extends Controller
         ]);
     }
 
+    public function addSearch($id){
+
+        return view('addSearch', [
+            'id' => $id,
+        ]);
+    }
+
+    public function store(Request $request, $id) {
+        $NS = new search;
+        $NS->owner = Auth::user()->id;
+        $NS->for = $id;
+        $NS->from = $request->from;
+        $NS->to = $request->to;
+        $NS->payment = $request->payment;
+        $NS->save();
+
+
+        return redirect('dashboard')->with('status', 'Animal has been inserted into search');
+    }
+
 
     public function showContact($id){
         $user = Auth::user();

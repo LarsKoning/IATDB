@@ -31,7 +31,11 @@
 
         <div class="form-group">
           <label for="exampleInputEmail1">Sort</label>
-          <input type="text" id="sort" name="sort" class="form-control" required="">
+          <select name="sort" id="sort" class="form-control" required="">
+            @foreach($SOA as $sort)
+              <option value="{{$sort->sort}}">{{$sort->sort}}</option>
+            @endforeach
+          </select>
         </div>
 
         <div class="form-group">

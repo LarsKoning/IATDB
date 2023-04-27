@@ -19,7 +19,7 @@
         <td>{{$animal->age}}</td>
         <td>{{$animal->sort}}</td>
         <td>{{$animal->note}}</td>
-        <td><a href="">Add Search</a></td>
+        <td><a href="/addSearch/{{$animal->animalID}}">Add Search</a></td>
         <td class="edit">
             <a href="/edit/{{$animal->animalID}}"><i class="fa-solid fa-pencil"></i></a>
         </td>

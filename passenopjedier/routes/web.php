@@ -43,6 +43,11 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/myAnimals', [\App\Http\Controllers\AnimalController::class, 'myAnimals'])->name('myAnimals');
 
+    Route::get('/addSearch/{id}', [\App\Http\Controllers\AnimalController::class, 'addSearch']);
+    Route::post('store-forums/{id}', [\App\Http\Controllers\AnimalController::class, 'store']);
+
+    Route::get('/admin', [App\Http\Controllers\MainController::class, 'showAdmin'])->name('admin');
+
 });
 
 require __DIR__.'/auth.php';

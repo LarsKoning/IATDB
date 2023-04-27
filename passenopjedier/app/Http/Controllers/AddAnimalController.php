@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\animal;
 use App\Models\animal_media;
+use App\Models\sort_of_animal;
 use Auth;
 
 class AddAnimalController extends Controller
 {
     public function index()
     {
-        return view('addAnimal');
+        $SOA = sort_of_animal::all();
+        return view('addAnimal', ['SOA' => $SOA,]);
     }
     public function store(Request $request)
     {
