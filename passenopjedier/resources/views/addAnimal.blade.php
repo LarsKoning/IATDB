@@ -17,7 +17,7 @@
       Add Animal
     </div>
     <div class="card-body">
-      <form name="addAnimal" id="addAnimal" method="post" action="{{url('store-form')}}">
+      <form name="addAnimal" id="addAnimal" method="post" action="{{url('store-form')}}" enctype="multipart/form-data">
        @csrf
         <div class="form-group">
           <label for="exampleInputEmail1">Name</label>
@@ -41,6 +41,10 @@
         <div class="form-group">
           <label for="exampleInputEmail1">Note</label>
           <input type="text" id="note" name="note" class="form-control" required="">
+        </div>
+
+        <div class="form-group">
+          <input type="file" id="myFile" name="filename" accept="image/png, image/jpeg" >
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

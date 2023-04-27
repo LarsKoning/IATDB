@@ -23,13 +23,16 @@ class AddAnimalController extends Controller
         $NA->age = $request->age;
         $NA->sort = $request->sort;
         $NA->note = $request->note;
-        
         $NA->save();
+        
+        if ($request->hasFile('filename')) {
+            $NAM = new animal_media;
+            $NAM->media = $request->file('filename')->store('/assets/Animals', 'public');
+            $NAM->animal = $NA->animalID;
+            $NAM->save();
+        }
 
-        $NAM = new animal_media;
-        $NAM->animal = $NA->animalID;
-
-        $NAM->save();
+        
         return redirect('myAnimals')->with('status', 'Animal has been inserted');
     }
 }
