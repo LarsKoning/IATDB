@@ -9,7 +9,7 @@
       @foreach ($searching as $search)
       <li>
         <a href="/searching/{{$search->id}}" class="card">
-        <img src="{{$search->mediaAnimal->media}}" class="card__image" alt="Picture of the animal">
+        <img src="/storage/{{$search->mediaAnimal->media}}" class="card__image" alt="Picture of the animal">
           <div class="card__overlay">
             <div class="card__header">
               <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
