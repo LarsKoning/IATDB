@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('animals_media', function (Blueprint $table) {
             $table->unsignedBigInteger("animal");
-            $table->string("media")->default("/assets/Animals/noimage.png");
+            $table->string("media")->default("animals/noimage.png");
 
             $table->foreign("animal")->references("animalID")->on("animals");
         });

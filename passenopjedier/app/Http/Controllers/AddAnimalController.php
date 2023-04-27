@@ -27,7 +27,7 @@ class AddAnimalController extends Controller
         
         if ($request->hasFile('filename')) {
             $NAM = new animal_media;
-            $NAM->media = $request->file('filename')->store('/assets/Animals', 'public');
+            $NAM->media = $request->file('filename')->store('/storage/animals', 'public');
             $NAM->animal = $NA->animalID;
             $NAM->save();
         }
