@@ -15,11 +15,11 @@ class AnimalsMediaSeeder extends Seeder
     {
         DB::table('animals_media')->insert([
             'animal' => '1',
-            'media' => 'animals/cat.jpg'
+            'media' => 'cat.jpg'
         ]);
         DB::table('animals_media')->insert([
             'animal' => '2',
-            'media' => 'animals/smartdoggo.jpeg'
+            'media' => 'smartdoggo.jpeg'
         ]);
         DB::table('animals_media')->insert([
             'animal' => '3'
