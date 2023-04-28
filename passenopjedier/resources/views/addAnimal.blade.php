@@ -44,7 +44,7 @@
         </div>
 
         <div class="form-group">
-          <input type="file" id="myFile" name="filename" accept="image/png, image/jpeg" >
+          <input type="file" id="myFile" name="filename" accept="image/png, image/jpeg" required="">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

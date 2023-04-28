@@ -32,7 +32,7 @@
       @foreach ($locations as $location)
       <li>
         <a href="/location/{{$location->address}}" class="card">
-        <img src="{{$location->searchMedia->first()->media}}" class="card__image" alt="Picture of the Home">
+        <img src="/assets/Locations/{{$location->searchMedia->first()->media}}" class="card__image" alt="Picture of the Home">
           <div class="card__overlay">
             <div class="card__header">
               <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
@@ -46,7 +46,7 @@
               this home is available for: 
               @if($location->whatAnimals != "[]")
                 @foreach ($location->whatAnimals as $homePet)
-                  {{$homePet->for}}
+                  {{$homePet->for}},
                 @endforeach
               @else
               any

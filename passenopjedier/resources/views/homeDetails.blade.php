@@ -1,14 +1,14 @@
 @extends('dashboard')
 @section('content')
 @foreach($allMedia as $media)
-  <img src="{{$media->media}}" class="pfp" alt="">
+  <img src="/assets/Locations/{{$media->media}}" class="pfp" alt="">
 @endforeach
 <p>{{$location->address}}, {{$location->city}}</p>
 
 <p>Available for: 
   @if($location->whatAnimals != "[]")
    @foreach ($location->whatAnimals as $homePet)
-      {{$homePet->for}}
+      {{$homePet->for}},
    @endforeach
   @else
   any

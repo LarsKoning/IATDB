@@ -9,5 +9,9 @@ class location_availability extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'location';
+
+    public $timestamps = false;
+
     protected $table = 'location_availability';
 }
