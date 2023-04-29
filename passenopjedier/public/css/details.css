@@ -1,4 +1,54 @@
 .pfp {
-  height: 25%;
-  width: 25%;
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+  height: auto;
+  border: 5px solid white;
+  box-shadow: 2px 2px 5px #999;
+}
+
+.tekstje {
+  text-align: center;
+  color: #f47c7c;
+  font-size: 3em;
+  text-shadow: 2px 2px 5px #333;
+  margin-top: 50px;
+  border-bottom: 2px solid #f47c7c;
+}
+
+.tekstjes{
+  margin-top: 20px;
+  color: #333;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.parag{
+  margin: 10px 0;
+  color: #333;
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
+.parags{
+  margin: 10px 0;
+  color: #333;
+  font-size: 1.5em;
+  line-height: 1.4;
+}
+
+.parags2{
+  margin: 10px 0;
+  color: #333;
+  font-size: 1.3em;
+  line-height: 1.4;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #f47c7c;
+
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
 }
