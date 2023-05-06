@@ -15,7 +15,7 @@ class ReviewsSeeder extends Seeder
     {
         DB::table('reviews')->insert([
             'location' => 'Wolfskers 64',
-            'review' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            'review' => "The animal caretaker's home is an ideal environment for animals. The caretaker is attentive, responsible and creates a comfortable atmosphere. Their commitment and passion towards animal care is evident and the animals are well-cared for and content. Highly recommended.",
             'rating' => 4,
         ]);
     }

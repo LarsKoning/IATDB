@@ -22,14 +22,14 @@ class AnimalsSeeder extends Seeder
             "note" => "Niet schelden, want hij gaat je kapot krabben"
         ]);
         DB::table('animals')->insert([
-            "name" => "gerrit",
+            "name" => "Gerrit",
             "age" => 1,
             "sort" => "Dog",
             "owner" => 2,
             "note" => "He run fast"
         ]);
         DB::table('animals')->insert([
-            "name" => "garfield",
+            "name" => "Garfield",
             "age" => 9,
             "sort" => "Cat",
             "owner" => 2,
