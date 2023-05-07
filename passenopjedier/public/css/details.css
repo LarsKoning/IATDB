@@ -171,3 +171,63 @@
 .knopje:active {
   background-color: #2e7031; /* Even darker green */
 }
+
+.filters {
+  font-size: 1.5rem;
+
+  float: left;
+
+  width: 20%;
+  margin: 0;
+  margin-right: 10rem;
+  padding: 2rem;
+
+  border-radius: 5%;
+  background: whitesmoke;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+.filters form {
+  display: inline-block;
+  width: 100%;
+}
+
+.filters label {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding-top: 1rem;
+  vertical-align: middle;
+  text-decoration: none;
+  color: darkgray;
+}
+
+.filters label:hover {
+  text-decoration: none;
+  color: pink;
+}
+
+.border-bottom {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.border-bottom:after {
+  display: block;
+  width: 70%;
+  content: ' ';
+  border: .1rem solid #d0d0d0;
+  -webkit-border-radius: .4rem;
+  -moz-border-radius: .4rem;
+  border-radius: .4rem;
+  -webkit-box-shadow: inset 0 .1rem .1rem rgba(0, 0, 0, .05);
+  -moz-box-shadow: inset 0 .1rem .1rem rgba(0, 0, 0, .05);
+  box-shadow: inset 0 .1rem .1rem rgba(0, 0, 0, .05);
+}
+
+.label-checkbox [type="checkbox"] {
+  transform: translateY(50%);
+}
