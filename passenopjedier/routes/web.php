@@ -28,7 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/dashboard', [App\Http\Controllers\MainController::class, 'show'])->name('dashboard');
 
-    Route::get('/location/{address}', [\App\Http\Controllers\LocationController::class, 'showSpecific']);
+    Route::get('/location/{address}', [\App\Http\Controllers\LocationController::class, 'showSpecific'])->name('location');
     Route::get('/searching/{id}', [\App\Http\Controllers\AnimalController::class, 'showSpecific']);
 
     Route::get('/addAnimal', [\App\Http\Controllers\AddAnimalController::class, 'index'])->name('addAnimal');
@@ -48,6 +48,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/admin', [App\Http\Controllers\MainController::class, 'showAdmin'])->name('admin');
 
+
+    Route::get('/addReview/{address}', [\App\Http\Controllers\AddreviewController::class, 'index']);
+    Route::post('/review/{address}', [\App\Http\Controllers\AddReviewController::class, 'store']);
 });
 
 require __DIR__.'/auth.php';

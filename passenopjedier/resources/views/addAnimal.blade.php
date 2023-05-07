@@ -17,7 +17,7 @@
       Add Animal
     </div>
     <div class="card-body">
-      <form name="addAnimal" id="addAnimal" method="post" action="{{url('store-form')}}" enctype="multipart/form-data">
+      <form name="addAnimal" id="addAnimal" method="post" action="{{url('store-formopje')}}" enctype="multipart/form-data">
        @csrf
         <div class="form-group">
           <label for="exampleInputEmail1">Name</label>
@@ -26,7 +26,7 @@
 
         <div class="form-group">
           <label for="exampleInputEmail1">Age</label>
-          <textarea name="age" class="form-control" required=""></textarea>
+          <input name="age" class="form-control" required="">
         </div>
 
         <div class="form-group">

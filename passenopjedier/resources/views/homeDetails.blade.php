@@ -29,20 +29,21 @@
   </div>
 </div>
 
-  <h1 class="parags2">Reviews</h1>
+<h1 class="htekstje3">
+  Reviews <br>
+  <a href="/addReview/{{$location->address}}" class="knopje">Add An Review</a>
+</h1>
 
-  <article class="reviews-container">
-    @foreach ($location->findReviews as $review)
-        <figure class="review">
-            <figcaption>
-                    
-                <h3>{{$review->review}}</h3>
-                <h4 class="rating">Rating: {{$review->rating}}</h4>
-            </figcaption>
-        </figure>
-    @endforeach
-  </article>
-
+<section class="wrapper">
+  @foreach ($location->findReviews as $review)
+    <section class="review-card">
+      <h3 class="review-text">{{$review->review}}</h3>
+      <div class="stars-container">
+        <h4 class="rating">Rating: {{$review->rating}}</h4>
+      </div>
+    </section>
+  @endforeach
+</section>
 
 
 @endsection

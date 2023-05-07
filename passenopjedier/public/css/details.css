@@ -32,6 +32,15 @@
   border-bottom: 2px solid #f47c7c;
 }
 
+.htekstje3 {
+  text-align: left;
+  color: #f47c7c;
+  font-size: 2.2em;
+  padding-left: 15px;
+  text-shadow: 2px 2px 5px #333;
+  border-bottom: 2px solid #f47c7c;
+}
+
 .tekstjes{
   margin-top: 20px;
   color: #333;
@@ -104,4 +113,61 @@
 }
 .owner .hdp {
   margin-top: 10px;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 75%;
+  margin: auto;
+}
+
+.review-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 300px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.review-text {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.rating {
+  color: #f9b616;
+  margin-right: 5px;
+}
+
+.knopje {
+  display: inline-block;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.knopje:hover {
+  background-color: #3e8e41; /* Darker green */
+}
+
+.knopje:active {
+  background-color: #2e7031; /* Even darker green */
 }
