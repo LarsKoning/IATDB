@@ -15,7 +15,7 @@ return new class extends Migration
             $table->unsignedBigInteger("animal");
             $table->string("media")->default("noimage.png");
 
-            $table->foreign("animal")->references("animalID")->on("animals");
+            $table->foreign("animal")->references("animalID")->on("animals")->onDelete('cascade');
         });
     }
 

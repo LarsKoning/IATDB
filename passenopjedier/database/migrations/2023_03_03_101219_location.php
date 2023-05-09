@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('city');
             $table->unsignedBigInteger('owner');
 
-            $table->foreign('owner')->references('id')->on('users');
+            $table->foreign('owner')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

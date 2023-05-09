@@ -47,10 +47,13 @@ Route::middleware('auth')->group(function () {
     Route::post('store-forums/{id}', [\App\Http\Controllers\AnimalController::class, 'store']);
 
     Route::get('/admin', [App\Http\Controllers\MainController::class, 'showAdmin'])->name('admin');
-
+    Route::get('/delete/{user}', [App\Http\Controllers\MainController::class, 'delete']);
 
     Route::get('/addReview/{address}', [\App\Http\Controllers\AddreviewController::class, 'index']);
     Route::post('/review/{address}', [\App\Http\Controllers\AddReviewController::class, 'store']);
+
+    Route::get('/deleteSearch/{id}', [App\Http\Controllers\AnimalController::class, 'delete']);
+
 });
 
 require __DIR__.'/auth.php';
