@@ -22,7 +22,8 @@ class AnimalsMediaSeeder extends Seeder
             'media' => 'smartdoggo.jpeg'
         ]);
         DB::table('animals_media')->insert([
-            'animal' => '3'
+            'animal' => '3',
+            'media' => 'Garfield_the_Cat.jpg'
         ]);
     }
 }
