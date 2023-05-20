@@ -14,7 +14,8 @@
     </head>
     <body class="antialiased">
         <section class="content">
-            <h1 class="context">Welcome</h1>
+            <h1 class="context">Welcome To PassenOpJeDier</h1>
+            <h1 class="context2">This Site Is Made For A School Project</h1>
 
             <button onclick="window.location.href='/login'" class="btn btn-primary btn-welcome">Log in</button>
             <button onclick="window.location.href='/register'" class="btn btn-secondary btn-welcome">Sign up</button>
