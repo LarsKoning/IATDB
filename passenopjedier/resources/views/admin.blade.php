@@ -18,7 +18,7 @@
         <td>{{$user->username}}</td>
         <td>{{$user->email}}</td>
         <td class="edit">
-            <a href="" onclick="return confirm('Weet je dit zeker?')"><i class="fa-solid fa-minus"></i></a>
+            <a href="/delete/{{$user->id}}" onclick="return confirm('Are You Sure?')"><i class="fa-solid fa-minus"></i></a>
         </td>
       </tr>
       @endforeach

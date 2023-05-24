@@ -89,4 +89,10 @@ class AnimalController extends Controller
 
         return redirect('/dashboard')->with('status', "animal updated");
     }
+
+    public function delete($id){
+        $search = search::find($id);
+        $search->delete();
+        return redirect('dashboard');
+    }
 }

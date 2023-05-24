@@ -38,4 +38,9 @@ class MainController extends Controller
             'users' => $users,
         ]);
     }
+
+    public function delete(User $user){
+        $user->delete();
+        return redirect('dashboard');
+    }
 }

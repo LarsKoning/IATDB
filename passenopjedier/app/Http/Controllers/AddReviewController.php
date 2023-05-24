@@ -24,6 +24,6 @@ class AddReviewController extends Controller
         $NR->location = $location;
         $NR->save();
 
-        return redirect('location')->with('status', 'Home had been inserted');
+        return redirect('dashboard')->with('status', 'Home had been inserted');
     }
 }

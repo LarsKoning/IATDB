@@ -29,9 +29,5 @@ class LocationMediaSeeder extends Seeder
             'location' => 'Wolfskers 64',
             'media' => 'huis4.jpg'
         ]);
-
-        DB::table('location_media')->insert([
-            'location' => 'Wolfskers 64'
-        ]);
     }
 }

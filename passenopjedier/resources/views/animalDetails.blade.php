@@ -9,5 +9,8 @@
 
   <p class="parag">{{ucfirst(trans($animal->name))}} needs to be taken care of between: {{$search->from}} -> {{$search->to}}</p>
   <p class="parag">The Price We Will Give You Is: €{{$search->payment}}</p>
+  <button>
+    <a href="/deleteSearch/{{$search->id}}" class="knopje">Take Care Of The Pet And Earn: €{{$search->payment}}</a>
+  </button>
 </div>
 @endsection

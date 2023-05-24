@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('location');
             $table->string('media')->default('noimage.png');
 
-            $table->foreign('location')->references('address')->on('location');
+            $table->foreign('location')->references('address')->on('location')->onDelete('cascade');
         });
     }
 
