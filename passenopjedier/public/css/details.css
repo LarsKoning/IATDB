@@ -174,16 +174,13 @@
 
 .filters {
   font-size: 1.5rem;
-
   float: left;
-
   width: 20%;
   margin: 0;
   margin-right: 10rem;
   padding: 2rem;
-
-  border-radius: 5%;
-  background: whitesmoke;
+  border-radius: 75px;
+  background: #ddd;
 }
 
 h6 {
